@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+   
+    <form action="assgn.php" method="post">
+        <h1>MSFC REGISTRATION FORM</h1>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="gen" id="gen" name="gen">Gender:</label><p>
+        Male:
+        <input type="radio" id="male" name="gender" value="Male"><p>
+        Female:
+        <input type="radio" id="female" name="gender" value="Female">
+       
+        AGE Range:        
+        <select id="age" name="age" aria-placeholder="select your age range">
+            <option value="7-10">7-10yrs</option>
+            <option value="11-14">11-14yrs</option>
+            <option value="15-19">15-19yrs</option>
+            <option value="20-25">20-25yrs</option>
+        </select>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
